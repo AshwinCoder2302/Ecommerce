@@ -1,0 +1,23 @@
+package com.ecommerce.product.model;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@Getter
+@Setter
+@Builder
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "product")
+public class Product {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "price")
+    private Integer price;
+    @Column(name = "description")
+    private String description;
+}
